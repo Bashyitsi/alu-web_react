@@ -1,26 +1,53 @@
-:root {
-    --main-color: #e01d3f;
-  }
-  
-  .Notifications {
-    border: 3px dashed var(--main-color);
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .Notifications button img {
-    width: 10px;
-  }
-  
-  .Notifications p {
-    margin: 0;
-    margin-top: 15px;
-  }
-  
-  [data-priority="default"] {
+.Notifications {
+    border: 2px dashed var(--holb-red);
+    padding: 24px;
+}
+
+.Notifications ul {
+    list-style-type: none;
+}
+
+.Notifications ul li {
+    list-style-type: disc;
+}
+
+.Notifications NotificationItem {
     color: blue;
-  }
-  
-  [data-priority="urgent"] {
+}
+
+.Notifications ul li[data-notification-type="default"] {
+    color: blue;
+}
+
+.Notifications ul li[data-notification-type="urgent"] {
     color: red;
-  }
+}
+
+.Notifications ul li:nth-last-child(1) {
+    color: red;
+    font-size: 18px;
+}
+
+.Notifications button {
+    float: right;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+}
+
+.Notifications button img {
+    height: 20px;
+    width: 20px;
+}
+
+.menu-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+}
